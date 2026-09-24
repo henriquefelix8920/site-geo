@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEO · Acompanhante de Luxo — Fortaleza</title>
+  <meta name="description" content="GEO — companhia de luxo e experiências exclusivas em Fortaleza. Presença, elegância e calor." />
+  <meta property="og:title" content="GEO · Fortaleza" />
+  <meta property="og:description" content="Acompanhante de luxo e videochamadas exclusivas. O calor antes do fogo." />
+  <meta property="og:type" content="website" />
 
+  <!-- Fontes: Fraunces (display serif) + Archivo (grotesca UI/corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,500&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="images/02-modelofrente.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ====== HEADER / NAVEGAÇÃO ====== -->
+  <header class="site-header" id="siteHeader" aria-label="Navegação principal">
+    <div class="header-inner">
+      <a href="#hero" class="brand" aria-label="GEO — início">
+        <span class="brand-mark">G</span><span class="brand-word">eO</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Seções">
+        <ul>
+          <li><a href="#hero" class="nav-link is-active"><span class="nav-num">01</span>Presença</a></li>
+          <li><a href="#geo" class="nav-link"><span class="nav-num">02</span>Geo</a></li>
+          <li><a href="#experiencia" class="nav-link"><span class="nav-num">03</span>Experiência</a></li>
+        </ul>
+        <a href="#falar" class="nav-cta">Falar comigo</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+    </div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  </header>
+
+  <!-- ====== HERO CINEMATOGRÁFICO ====== -->
+  <section class="hero" id="hero" aria-label="Apresentação">
+
+    <!-- Camada 1: vídeo de fundo com zoom/parallax dirigido por scroll -->
+    <div class="hero-media" id="heroMedia" aria-hidden="true">
+      <!-- Fallback estático primeiro (mobile/lite): 02-modelofrente.jpg -->
+      <img class="hero-fallback" src="images/02-modelofrente.jpg" alt="" loading="eager" fetchpriority="high" />
+      <!-- Vídeo: 01-videofundo.mp4 — muted, autoplay, loop, playsinline -->
+      <video class="hero-video" id="heroVideo"
+             muted autoplay loop playsinline preload="metadata"
+             poster="images/02-modelofrente.jpg" disablepictureinpicture>
+        <source src="images/01-videofundo.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-veil hero-veil--grade"></div>
+      <div class="hero-veil hero-veil--ember"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <!-- Camada 2: conteúdo com revelação escalonada -->
+    <div class="hero-content">
+      <p class="hero-kicker reveal r-1">
+        <span class="kicker-dot" aria-hidden="true"></span>
+        Fortaleza&nbsp;·&nbsp;CE — Disponível para experiências selecionadas
+      </p>
+
+      <h1 class="hero-title">
+        <span class="title-mask"><span class="title-inner r-2">GEO</span></span>
+      </h1>
+
+      <p class="hero-subtitle reveal r-3">
+        Companhia de luxo <em>&amp;</em> videochamadas exclusivas.
+      </p>
+
+      <p class="hero-tagline italic-reveal r-4">
+        o calor <span class="accent">antes</span> do fogo
+      </p>
+
+      <div class="hero-actions r-5">
+        <a href="#falar" class="btn btn--primary">Falar comigo</a>
+        <a href="#geo" class="btn btn--ghost" aria-label="Conhecer Geo">Conhecer&nbsp;↓</a>
+      </div>
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="scroll-hint r-6" aria-hidden="true">
+      <span class="scroll-hint-label">Role</span>
+      <span class="scroll-hint-track"><span class="scroll-hint-bead"></span></span>
+    </div>
+
+    <!-- Dots laterais de navegação (desktop) -->
+    <nav class="side-dots" aria-label="Indicador de seção">
+      <a href="#hero" class="dot is-active" data-label="Presença"><span></span></a>
+      <a href="#geo" class="dot" data-label="Geo"><span></span></a>
+      <a href="#experiencia" class="dot" data-label="Experiência"><span></span></a>
+      <a href="#falar" class="dot" data-label="Falar comigo"><span></span></a>
+    </nav>
+  </section>
+
+  <!-- Placeholders mínimos apenas para permitir o scroll que dirige as animações do Hero.
+       As próximas seções serão construídas nas fases seguintes. -->
+  <section class="phase-placeholder" id="geo" aria-label="Próxima seção (em construção)">
+    <p class="placeholder-note"><span class="ph-num">02</span> Aproximação <span class="ph-sep">·</span> próxima fase</p>
+  </section>
+  <section class="phase-placeholder" id="experiencia" aria-label="Próxima seção (em construção)">
+    <p class="placeholder-note"><span class="ph-num">03</span> Tensão <span class="ph-sep">·</span> próxima fase</p>
+  </section>
+  <section class="phase-placeholder" id="falar" aria-label="Próxima seção (em construção)">
+    <p class="placeholder-note"><span class="ph-num">04</span> Falar comigo <span class="ph-sep">·</span> próxima fase</p>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
