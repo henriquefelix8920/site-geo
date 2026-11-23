@@ -1,0 +1,17 @@
+{
+  "name": "OpenCode Workspace",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "forwardPorts": [4096],
+  "portsAttributes": {
+    "4096": {
+      "label": "OpenCode Web",
+      "onAutoForward": "openBrowser",
+      "visibility": "private"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/install-opencode.sh",
+  "postStartCommand": "bash .devcontainer/start-opencode.sh"
+}
